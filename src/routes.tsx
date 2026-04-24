@@ -3,56 +3,35 @@ import { servizi } from "./data/servizi";
 import { articoli } from "./data/blog";
 import { landings } from "./data/landings";
 
+const wrap = (loader: () => Promise<{ default: React.ComponentType }>) =>
+  async () => {
+    const m = await loader();
+    return { Component: m.default };
+  };
+
 export const routes: RouteRecord[] = [
-  {
-    path: "/",
-    lazy: () => import("./pages/Index"),
-  },
-  {
-    path: "/chi-sono",
-    lazy: () => import("./pages/ChiSono"),
-  },
-  {
-    path: "/servizi",
-    lazy: () => import("./pages/Servizi"),
-  },
+  { path: "/", lazy: wrap(() => import("./pages/Index")) },
+  { path: "/chi-sono", lazy: wrap(() => import("./pages/ChiSono")) },
+  { path: "/servizi", lazy: wrap(() => import("./pages/Servizi")) },
   {
     path: "/servizi/:slug",
-    lazy: () => import("./pages/ServizioDettaglio"),
+    lazy: wrap(() => import("./pages/ServizioDettaglio")),
     getStaticPaths: () => servizi.map((s) => `/servizi/${s.slug}`),
   },
-  {
-    path: "/trasformazioni",
-    lazy: () => import("./pages/Trasformazioni"),
-  },
-  {
-    path: "/blog",
-    lazy: () => import("./pages/Blog"),
-  },
+  { path: "/trasformazioni", lazy: wrap(() => import("./pages/Trasformazioni")) },
+  { path: "/blog", lazy: wrap(() => import("./pages/Blog")) },
   {
     path: "/blog/:slug",
-    lazy: () => import("./pages/BlogArticolo"),
+    lazy: wrap(() => import("./pages/BlogArticolo")),
     getStaticPaths: () => articoli.map((a) => `/blog/${a.slug}`),
   },
-  {
-    path: "/contatti",
-    lazy: () => import("./pages/Contatti"),
-  },
-  {
-    path: "/privacy-policy",
-    lazy: () => import("./pages/PrivacyPolicy"),
-  },
-  {
-    path: "/cookie-policy",
-    lazy: () => import("./pages/CookiePolicy"),
-  },
+  { path: "/contatti", lazy: wrap(() => import("./pages/Contatti")) },
+  { path: "/privacy-policy", lazy: wrap(() => import("./pages/PrivacyPolicy")) },
+  { path: "/cookie-policy", lazy: wrap(() => import("./pages/CookiePolicy")) },
   {
     path: "/l/:slug",
-    lazy: () => import("./pages/LandingPage"),
+    lazy: wrap(() => import("./pages/LandingPage")),
     getStaticPaths: () => landings.map((l) => `/l/${l.slug}`),
   },
-  {
-    path: "*",
-    lazy: () => import("./pages/NotFound"),
-  },
+  { path: "*", lazy: wrap(() => import("./pages/NotFound")) },
 ];
