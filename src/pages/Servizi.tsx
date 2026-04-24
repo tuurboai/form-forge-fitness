@@ -22,7 +22,10 @@ export default function Servizi() {
               Se non sai quale percorso fa per te, non ti preoccupare: la prima consulenza serve esattamente a questo. In trenta minuti capiamo dove sei, dove vuoi arrivare, quanto tempo hai davvero a disposizione e qual è il formato che ti permette di essere costante. Spesso le persone arrivano convinte di volere il personal training 1:1 e si rendono conto che il coaching online si incastra meglio nelle loro settimane. O viceversa.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I prezzi indicati sono di partenza e variano in base al numero di sessioni del pacchetto, alla zona di Milano per il domicilio, e alla complessità del programma nutrizionale eventualmente associato. Tutto viene messo nero su bianco prima di iniziare: nessuna sorpresa, nessun rinnovo automatico, nessuna penale se per qualunque motivo il percorso non funziona e decidi di interrompere.
+              I prezzi indicati sono di partenza e variano in base al numero di sessioni del pacchetto, alla zona di Milano per il domicilio, e alla complessità del programma nutrizionale eventualmente associato. Tutto viene messo nero su bianco prima di iniziare: nessuna sorpresa, nessun rinnovo automatico, nessuna penale se per qualunque motivo il percorso non funziona e decidi di interrompere. Per i pacchetti multipli sono previste riduzioni progressive, e per chi sceglie di rinnovare dopo il primo ciclo c'è una tariffa di fidelizzazione che resta bloccata negli anni successivi.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Una nota importante sul coaching online: non è una versione "low cost" del personal training in presenza, è semplicemente un formato diverso, adatto a chi ha già una buona autonomia in palestra o a chi vive lontano da Milano. Il livello di personalizzazione è identico, cambia solo il modo in cui ci vediamo. Le sessioni in presenza restano insostituibili per chi è completamente alle prime armi o per chi sta riprendendo dopo un infortunio: il feedback in tempo reale sulla tecnica è un valore che nessuna videochiamata può replicare al cento per cento.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

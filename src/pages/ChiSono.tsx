@@ -23,8 +23,11 @@ export default function ChiSono() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Lavoro in palestra in zona Navigli, a domicilio se preferisci la comodità di casa, all'aperto nei parchi quando il meteo regge, e online con chi non vive a Milano ma vuole un coach serio che non si limita a mandare PDF generici. Ho clienti da Roma, Torino, Berlino e perfino due da Singapore: la distanza non è mai stata un problema, la mancanza di metodo sì.
             </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Quando non alleno, alleno me stesso. Pratico powerlifting amatoriale, corro almeno tre volte a settimana, e una volta all'anno mi prendo una settimana intera per studiare — corsi, libri, conferenze. Il giorno in cui smetterò di imparare sarà il giorno in cui chiuderò la partita IVA. Per il resto, vivo a due passi dai Navigli, cucino male ma con entusiasmo, e nel weekend cerco di stare il più possibile fuori da palestre e PDF di anatomia.
+            </p>
             <p className="text-muted-foreground leading-relaxed">
-              Quando non alleno, alleno me stesso. Pratico powerlifting amatoriale, corro almeno tre volte a settimana, e una volta all'anno mi prendo una settimana per studiare — corsi, libri, conferenze. Il giorno in cui smetterò di imparare sarà il giorno in cui chiuderò la partita IVA.
+              Una cosa in cui credo profondamente: il personal trainer non è un istruttore di esercizi, è un costruttore di abitudini. Gli esercizi giusti li trovi anche su YouTube, gratis, in alta definizione. Quello che non trovi è qualcuno che costruisca un sistema sostenibile attorno alla tua vita reale e che ti tenga aggrappato al percorso quando la motivazione vacilla. Quello è il mio lavoro vero, ed è per questo che vengo pagato. Tutto il resto — schede, set, ripetizioni, periodizzazione — è solo lo strumento con cui faccio il mestiere.
             </p>
           </div>
           <img src="https://picsum.photos/seed/luca-portrait/700/900" alt="Luca Ferretti" className="w-full block" />
