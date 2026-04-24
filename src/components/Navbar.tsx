@@ -7,7 +7,7 @@ export default function Navbar() {
       isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
     }`;
 
-  const categorie = [...new Set(landings.map((l) => l.categoria))];
+  const categorie = Array.from(new Set(landings.map((l) => l.categoria as string)));
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
