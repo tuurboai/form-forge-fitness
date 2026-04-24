@@ -9,8 +9,11 @@ export default function Contatti() {
           <div>
             <div className="text-primary uppercase tracking-widest text-sm mb-4">Contatti</div>
             <h2 className="font-display text-5xl md:text-6xl mb-6">PARLIAMO DEL TUO OBIETTIVO</h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Compila il form qui accanto. Ti rispondo entro 24 ore con una proposta concreta o una call gratuita.
+            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+              Compila il form qui accanto e raccontami in due righe cosa ti porta qui. Ti rispondo entro ventiquattro ore con una proposta concreta o, se preferisci, fissiamo una call gratuita di trenta minuti per capire insieme se il mio metodo è quello giusto per te.
+            </p>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Non mando preventivi standardizzati e non ti inserisco in nessuna lista email automatica. Leggo personalmente ogni richiesta e rispondo personalmente. Se preferisci scrivere su WhatsApp o chiamare direttamente, trovi tutti i contatti qui sotto — l'orario migliore per la cornetta è dalle 9 alle 11 del mattino o dopo le 19, fuori dalle fasce di allenamento con i clienti.
             </p>
             <div className="space-y-4 text-sm">
               <div>

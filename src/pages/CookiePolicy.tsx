@@ -7,15 +7,61 @@ export default function CookiePolicy() {
         <div className="container mx-auto max-w-3xl">
           <h2 className="font-display text-5xl mb-8">COOKIE POLICY</h2>
           <div className="space-y-6 text-foreground/90 leading-relaxed">
-            <p>Questo sito utilizza cookie tecnici e, previo consenso, cookie analitici e di profilazione di terze parti.</p>
+            <p>
+              La presente Cookie Policy descrive le tipologie di cookie e di altri strumenti di tracciamento utilizzati dal sito lucaferrettift.it, le finalità per cui sono utilizzati e le modalità con cui l'utente può gestire le proprie preferenze. Il documento è redatto in conformità a quanto previsto dal Regolamento UE 2016/679 (GDPR), dalla Direttiva ePrivacy 2002/58/CE e successive modifiche, e dalle Linee Guida del Garante per la Protezione dei Dati Personali in materia di cookie e altri strumenti di tracciamento del 10 giugno 2021.
+            </p>
+            <p>
+              I cookie sono piccoli file di testo che i siti web visitati dall'utente inviano al suo terminale (computer, tablet, smartphone), dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva. I cookie sono utilizzati per scopi diversi: esecuzione di autenticazioni informatiche, monitoraggio di sessioni, memorizzazione di informazioni su specifiche configurazioni riguardanti gli utenti che accedono al server, memorizzazione delle preferenze, analisi del traffico, profilazione a fini commerciali. Insieme ai cookie tradizionali, esistono altri strumenti di tracciamento che svolgono funzioni analoghe, come pixel di tracciamento, web beacon, fingerprinting del dispositivo e tecnologie basate su localStorage o sessionStorage del browser.
+            </p>
+
             <h4 className="font-display text-2xl mt-8">Cookie tecnici</h4>
-            <p>Necessari al corretto funzionamento del sito. Non richiedono consenso.</p>
+            <p>
+              I cookie tecnici sono quelli utilizzati al solo fine di effettuare la trasmissione di una comunicazione su una rete di comunicazione elettronica, o nella misura strettamente necessaria al fornitore di un servizio della società dell'informazione esplicitamente richiesto dall'utente a erogare tale servizio. Si suddividono in cookie di navigazione o sessione (che garantiscono la normale navigazione e fruizione del sito web), cookie analytics quando assimilati ai cookie tecnici (laddove utilizzati direttamente dal gestore del sito per raccogliere informazioni in forma aggregata sul numero degli utenti e su come questi visitano il sito), e cookie di funzionalità (che permettono all'utente la navigazione in funzione di una serie di criteri selezionati al fine di migliorare il servizio reso allo stesso). Per l'installazione di tali cookie non è richiesto il preventivo consenso degli utenti, mentre resta fermo l'obbligo di dare l'informativa ai sensi dell'art. 13 del GDPR.
+            </p>
+            <p>
+              Il sito utilizza cookie tecnici di sessione per garantire il corretto funzionamento delle pagine, per memorizzare la scelta dell'utente in merito al consenso ai cookie e per consentire la corretta visualizzazione dei contenuti su diversi dispositivi e risoluzioni. Questi cookie scadono al termine della sessione di navigazione (alla chiusura del browser) o entro un periodo di tempo limitato esplicitamente indicato.
+            </p>
+
             <h4 className="font-display text-2xl mt-8">Cookie analitici</h4>
-            <p>Utilizzati per misurare il traffico e migliorare l'esperienza utente in forma aggregata e anonima.</p>
-            <h4 className="font-display text-2xl mt-8">Cookie di profilazione</h4>
-            <p>Utilizzati per mostrare annunci pubblicitari in linea con gli interessi dell'utente. Possono essere disattivati in qualsiasi momento.</p>
-            <h4 className="font-display text-2xl mt-8">Gestione preferenze</h4>
-            <p>L'utente può modificare le preferenze sui cookie tramite le impostazioni del proprio browser.</p>
+            <p>
+              I cookie analitici sono utilizzati per misurare il traffico al sito, raccogliendo informazioni in forma aggregata sul numero di utenti, su come visitano il sito, su quali pagine vengono visualizzate più frequentemente e per quanto tempo. Le informazioni raccolte da questi cookie sono utilizzate esclusivamente per migliorare l'esperienza utente, identificare malfunzionamenti, ottimizzare la velocità di caricamento delle pagine e capire quali contenuti sono più rilevanti per i visitatori. Il sito utilizza strumenti di analisi forniti da terze parti, configurati in modo tale da ridurre il potere identificativo dei cookie attraverso la mascheratura di porzioni significative dell'indirizzo IP dell'utente.
+            </p>
+            <p>
+              Quando i cookie analitici vengono utilizzati con misure di anonimizzazione adeguate e i fornitori terzi non incrociano i dati raccolti con altre informazioni di cui dispongono per profilare il singolo utente, possono essere assimilati ai cookie tecnici e installati senza preventivo consenso. In tutti gli altri casi, i cookie analitici sono installati esclusivamente previo consenso esplicito dell'utente, prestato attraverso il banner di scelta che compare al primo accesso al sito.
+            </p>
+
+            <h4 className="font-display text-2xl mt-8">Cookie di profilazione e marketing</h4>
+            <p>
+              I cookie di profilazione sono volti a creare profili relativi all'utente e vengono utilizzati al fine di inviare messaggi pubblicitari in linea con le preferenze manifestate dallo stesso nell'ambito della navigazione in rete. Il sito può utilizzare cookie di profilazione di terze parti per consentire la corretta erogazione di campagne pubblicitarie su Meta (Facebook e Instagram), Google Ads, LinkedIn e altre piattaforme di advertising, nonché per misurare l'efficacia di tali campagne attraverso eventi di conversione. Tra le tecnologie utilizzate rientra il pixel di tracciamento, un piccolo elemento grafico inserito nelle pagine del sito che permette di rilevare la visita dell'utente e associarla, ove l'utente abbia un account attivo sulla piattaforma di riferimento, al suo profilo per finalità di retargeting e ottimizzazione delle campagne.
+            </p>
+            <p>
+              Tali cookie e strumenti di tracciamento sono installati esclusivamente previo consenso esplicito dell'utente, prestato attraverso il banner di scelta. L'utente può modificare la propria scelta in qualsiasi momento utilizzando l'apposito pulsante presente nel footer del sito o, in alternativa, intervenendo direttamente sulle impostazioni del proprio browser o sulle preferenze pubblicitarie messe a disposizione dalle singole piattaforme di advertising (ad esempio le impostazioni pubblicitarie di Meta o di Google).
+            </p>
+
+            <h4 className="font-display text-2xl mt-8">Cookie di terze parti</h4>
+            <p>
+              Durante la navigazione sul sito l'utente potrebbe ricevere sul proprio terminale anche cookie inviati da siti o da web server diversi (cosiddetti cookie di "terze parti"), su cui possono risiedere alcuni elementi (quali, ad esempio, immagini, mappe, suoni, specifici link a pagine di altri domini) presenti sul sito. Per tali cookie, l'obbligo di informativa e di acquisizione del consenso, ove necessario, ricade sui terzi. Il Titolare del sito, in conformità con quanto previsto dalla normativa, fornisce di seguito i link alle relative informative dei principali servizi di terze parti potenzialmente attivi: Google Analytics e Google Ads (policies.google.com/privacy), Meta Pixel (www.facebook.com/policy), LinkedIn Insight Tag (www.linkedin.com/legal/privacy-policy), Hotjar (www.hotjar.com/legal/policies/privacy). L'utente è invitato a consultare tali informative per ottenere informazioni complete sul trattamento dei propri dati da parte dei rispettivi fornitori.
+            </p>
+
+            <h4 className="font-display text-2xl mt-8">Durata dei cookie</h4>
+            <p>
+              I cookie utilizzati hanno durata variabile in base alla loro tipologia. I cookie di sessione, indispensabili per la navigazione, vengono eliminati automaticamente alla chiusura del browser. I cookie persistenti rimangono memorizzati sul dispositivo dell'utente fino alla loro scadenza naturale o fino alla loro rimozione manuale. La durata massima dei cookie persistenti utilizzati o consentiti su questo sito non supera i ventiquattro mesi, come previsto dalle linee guida del Garante. Trascorso tale periodo, il consenso dell'utente al loro utilizzo viene nuovamente richiesto.
+            </p>
+
+            <h4 className="font-display text-2xl mt-8">Gestione delle preferenze tramite browser</h4>
+            <p>
+              L'utente può modificare in qualsiasi momento le proprie preferenze sui cookie intervenendo direttamente sulle impostazioni del proprio browser, configurandolo in modo da bloccare l'installazione dei cookie o da eliminare quelli già installati. Le modalità di gestione variano a seconda del browser utilizzato; di seguito sono indicati i link alle istruzioni dei principali browser: Google Chrome (support.google.com/chrome), Mozilla Firefox (support.mozilla.org), Apple Safari (support.apple.com), Microsoft Edge (support.microsoft.com), Opera (help.opera.com). Si tenga presente che la disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento del sito e impedire all'utente di usufruire di alcune funzionalità.
+            </p>
+
+            <h4 className="font-display text-2xl mt-8">Gestione delle preferenze tramite il banner</h4>
+            <p>
+              Al primo accesso al sito viene mostrato all'utente un banner informativo che consente di prestare o negare il consenso all'installazione dei cookie diversi da quelli tecnici. L'utente ha la possibilità di accettare tutti i cookie, rifiutare tutti i cookie non tecnici, o personalizzare le proprie scelte distinguendo tra le diverse categorie (cookie analitici, cookie di profilazione, cookie di terze parti). Le scelte effettuate vengono memorizzate in un cookie tecnico dedicato, in modo che l'utente non debba esprimerle nuovamente a ogni visita. La revisione delle scelte effettuate è sempre possibile attraverso l'apposito pulsante presente nel footer di tutte le pagine del sito.
+            </p>
+
+            <h4 className="font-display text-2xl mt-8">Modifiche alla presente Cookie Policy</h4>
+            <p>
+              Il Titolare del trattamento si riserva il diritto di apportare modifiche alla presente Cookie Policy in qualunque momento, in conseguenza di aggiornamenti normativi, dell'introduzione di nuovi servizi sul sito o di nuovi strumenti di tracciamento, o di modifiche tecniche apportate dai fornitori di servizi terzi. Le modifiche saranno pubblicate su questa pagina, con indicazione della data di ultimo aggiornamento. Si invitano gli utenti a consultare regolarmente la presente policy. Qualora le modifiche introducano nuove tipologie di cookie soggetti a consenso, il banner di scelta verrà nuovamente mostrato all'utente per consentire l'aggiornamento delle proprie preferenze.
+            </p>
           </div>
         </div>
       </section>

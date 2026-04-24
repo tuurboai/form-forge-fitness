@@ -21,10 +21,10 @@ export default function LandingPage() {
   }
 
   const benefici = [
-    { titolo: "Programma su misura", desc: "Costruito sui tuoi obiettivi, sul tuo tempo, sul tuo livello." },
-    { titolo: "Risultati misurabili", desc: "Check-in regolari per monitorare ogni progresso reale." },
-    { titolo: "Supporto continuo", desc: "Sono raggiungibile via WhatsApp tra una sessione e l'altra." },
-    { titolo: "Zero perdite di tempo", desc: "Niente esercizi inutili, solo ciò che funziona davvero." },
+    { titolo: "Programma su misura", desc: "Costruito sui tuoi obiettivi reali, non su modelli generici copia-incolla." },
+    { titolo: "Risultati misurabili", desc: "Check-in regolari, numeri alla mano. Sai sempre dove sei e dove stai andando." },
+    { titolo: "Supporto continuo", desc: "WhatsApp aperto tra una sessione e l'altra. Non sei mai solo nel percorso." },
+    { titolo: "Zero perdite di tempo", desc: "Ogni esercizio ha un perché. Niente filler, solo ciò che porta risultati." },
   ];
 
   return (
@@ -40,7 +40,10 @@ export default function LandingPage() {
       {/* Mixed alt: some empty, some missing — intentional */}
       <section className="py-20">
         <div className="container mx-auto">
-          <h2 className="font-display text-4xl md:text-5xl text-center mb-12">PERCHÉ FUNZIONA</h2>
+          <h2 className="font-display text-4xl md:text-5xl text-center mb-4">PERCHÉ FUNZIONA</h2>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+            Quattro motivi concreti per cui chi inizia con me arriva al risultato — e ci resta.
+          </p>
           <div className="grid md:grid-cols-4 gap-6">
             {benefici.map((b, i) => (
               <div key={b.titolo} className="bg-card border border-border p-6 text-center">
@@ -62,7 +65,7 @@ export default function LandingPage() {
         <div className="container mx-auto max-w-3xl text-center">
           <div className="text-accent text-6xl mb-4">"</div>
           <p className="text-2xl md:text-3xl font-display leading-tight mb-6">
-            HO PERSO 12 KG IN 4 MESI. NON PENSAVO FOSSE POSSIBILE A 38 ANNI.
+            HO PERSO 12 KG IN 4 MESI. NON PENSAVO FOSSE POSSIBILE A 38 ANNI, CON DUE FIGLI E UN LAVORO DA QUARANTA ORE A SETTIMANA.
           </p>
           <div className="text-primary uppercase tracking-widest text-sm">— Marco R., cliente dal 2024</div>
         </div>
@@ -71,7 +74,9 @@ export default function LandingPage() {
       <section id="form" className="py-20">
         <div className="container mx-auto max-w-xl">
           <h2 className="font-display text-4xl md:text-5xl text-center mb-4">RICHIEDI INFO</h2>
-          <p className="text-muted-foreground text-center mb-10">Compila il form. Ti ricontatto entro 24h.</p>
+          <p className="text-muted-foreground text-center mb-10">
+            Compila il form. Ti ricontatto entro 24 ore con una proposta concreta. Nessun impegno, nessun preventivo automatico.
+          </p>
           <form
             onSubmit={(e) => { e.preventDefault(); alert("Richiesta inviata (demo)"); }}
             className="bg-card border border-border p-8 space-y-4"
