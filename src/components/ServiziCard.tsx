@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { imageForSeed } from "@/assets/images";
 
 interface ServiziCardProps {
   slug: string;
@@ -15,7 +16,7 @@ export default function ServiziCard({ slug, titolo, descrizione, durata, prezzo,
     <article className="bg-card border border-border hover:border-primary transition-colors group">
       {/* No fixed height wrapper, no width/height on img — intentional CLS */}
       <img
-        src={`https://picsum.photos/seed/${seed}/600/400`}
+        src={imageForSeed(seed)}
         alt={titolo}
         className="w-full block"
       />

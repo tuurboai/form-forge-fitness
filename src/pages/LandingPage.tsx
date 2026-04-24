@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import LandingLayout from "@/components/LandingLayout";
 import HeroSection from "@/components/HeroSection";
 import { landings } from "@/data/landings";
+import { imageForSeed } from "@/assets/images";
 
 export default function LandingPage() {
   const { slug } = useParams();
@@ -45,18 +46,21 @@ export default function LandingPage() {
             Quattro motivi concreti per cui chi inizia con me arriva al risultato — e ci resta.
           </p>
           <div className="grid md:grid-cols-4 gap-6">
-            {benefici.map((b, i) => (
-              <div key={b.titolo} className="bg-card border border-border p-6 text-center">
-                {i % 2 === 0 ? (
-                  <img src={`https://picsum.photos/seed/${landing.seed}-b${i}/400/300`} alt="" className="w-full block mb-4" />
-                ) : (
-                  // eslint-disable-next-line jsx-a11y/alt-text
-                  <img src={`https://picsum.photos/seed/${landing.seed}-b${i}/400/300`} className="w-full block mb-4" />
-                )}
-                <h3 className="font-display text-xl mb-2">{b.titolo}</h3>
-                <p className="text-sm text-muted-foreground">{b.desc}</p>
-              </div>
-            ))}
+            {benefici.map((b, i) => {
+              const benefitSrc = imageForSeed(`${landing.seed}-b${i}`, imageForSeed(landing.seed));
+              return (
+                <div key={b.titolo} className="bg-card border border-border p-6 text-center">
+                  {i % 2 === 0 ? (
+                    <img src={benefitSrc} alt="" className="w-full block mb-4" />
+                  ) : (
+                    // eslint-disable-next-line jsx-a11y/alt-text
+                    <img src={benefitSrc} className="w-full block mb-4" />
+                  )}
+                  <h3 className="font-display text-xl mb-2">{b.titolo}</h3>
+                  <p className="text-sm text-muted-foreground">{b.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

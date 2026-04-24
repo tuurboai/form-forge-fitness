@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import CTABanner from "@/components/CTABanner";
 import { articoli } from "@/data/blog";
+import { imageForSeed } from "@/assets/images";
 
 export default function BlogArticolo() {
   const { slug } = useParams();
@@ -34,7 +35,7 @@ export default function BlogArticolo() {
           </div>
           <h2 className="font-display text-4xl md:text-6xl mb-6 leading-tight">{articolo.titolo}</h2>
           <p className="text-xl text-muted-foreground mb-10">{articolo.intro}</p>
-          <img src={`https://picsum.photos/seed/${articolo.seed}/1200/600`} alt={articolo.titolo} className="w-full block mb-10" />
+          <img src={imageForSeed(articolo.seed)} alt={articolo.titolo} className="w-full block mb-10" />
           <div className="prose prose-invert max-w-none space-y-6 text-foreground/90 leading-relaxed">
             <p>
               C'è una domanda che mi viene fatta praticamente ogni settimana, e la risposta non è mai la stessa.

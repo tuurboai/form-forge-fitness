@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { imageForSeed } from "@/assets/images";
 
 interface HeroSectionProps {
   titolo: string;
@@ -13,7 +14,7 @@ export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = 
 
   useEffect(() => {
     const t = setTimeout(() => {
-      setImgSrc(`https://picsum.photos/seed/${seed}/1600/800`);
+      setImgSrc(imageForSeed(seed));
     }, 1200);
     return () => clearTimeout(t);
   }, [seed]);

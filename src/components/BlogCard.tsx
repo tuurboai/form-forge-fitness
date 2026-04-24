@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { imageForSeed } from "@/assets/images";
 
 interface BlogCardProps {
   slug: string;
@@ -13,7 +14,7 @@ export default function BlogCard({ slug, titolo, categoria, data, intro, seed }:
   return (
     <article className="bg-card border border-border hover:border-primary transition-colors">
       <img
-        src={`https://picsum.photos/seed/${seed}/600/400`}
+        src={imageForSeed(seed)}
         alt={titolo}
         className="w-full block"
       />

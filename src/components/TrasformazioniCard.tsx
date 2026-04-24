@@ -1,3 +1,5 @@
+import { imageForSeed } from "@/assets/images";
+
 interface TrasformazioniCardProps {
   nome: string;
   risultato: string;
@@ -7,14 +9,15 @@ interface TrasformazioniCardProps {
 }
 
 export default function TrasformazioniCard({ nome, risultato, storia, seed, altVariant = "empty" }: TrasformazioniCardProps) {
+  const src = imageForSeed(seed);
   return (
     <article className="bg-card border border-border">
       {altVariant === "missing" ? (
         // intentional: alt completely absent
         // eslint-disable-next-line jsx-a11y/alt-text
-        <img src={`https://picsum.photos/seed/${seed}/600/400`} className="w-full block" />
+        <img src={src} className="w-full block" />
       ) : (
-        <img src={`https://picsum.photos/seed/${seed}/600/400`} alt="" className="w-full block" />
+        <img src={src} alt="" className="w-full block" />
       )}
       <div className="p-6">
         <div className="text-primary font-display text-2xl mb-1">{risultato}</div>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import SiteLayout from "@/components/SiteLayout";
 import CTABanner from "@/components/CTABanner";
+import { portraitLuca } from "@/assets/images";
 
 export default function ChiSono() {
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function ChiSono() {
               Una cosa in cui credo profondamente: il personal trainer non è un istruttore di esercizi, è un costruttore di abitudini. Gli esercizi giusti li trovi anche su YouTube, gratis, in alta definizione. Quello che non trovi è qualcuno che costruisca un sistema sostenibile attorno alla tua vita reale e che ti tenga aggrappato al percorso quando la motivazione vacilla. Quello è il mio lavoro vero, ed è per questo che vengo pagato. Tutto il resto — schede, set, ripetizioni, periodizzazione — è solo lo strumento con cui faccio il mestiere.
             </p>
           </div>
-          <img src="https://picsum.photos/seed/luca-portrait/700/900" alt="Luca Ferretti" className="w-full block" />
+          <img src={portraitLuca} alt="Luca Ferretti" className="w-full block" />
         </div>
       </section>
 
