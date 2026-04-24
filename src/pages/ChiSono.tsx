@@ -15,13 +15,19 @@ export default function ChiSono() {
             <div className="text-primary uppercase tracking-widest text-sm mb-4">Chi sono</div>
             <h2 className="font-display text-5xl md:text-6xl mb-6">CIAO, SONO LUCA.</h2>
             <p className="text-lg text-foreground/90 mb-4 leading-relaxed">
-              Personal trainer a Milano da 9 anni. Ho aiutato oltre 340 persone a trasformare il proprio corpo e la propria vita.
+              Personal trainer a Milano da nove anni. Ho seguito oltre trecentoquaranta persone — dai ventenni che mettono piede in palestra per la prima volta ai sessantenni che vogliono tornare a giocare a calcetto senza svegliarsi distrutti il giorno dopo. Ho iniziato per caso, allenando un amico in un parchetto vicino casa nel 2016. Mi sono accorto che mi piaceva più costruire programmi che farli per me stesso, e da lì non mi sono più fermato.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              La mia filosofia è semplice: niente scorciatoie, niente promesse impossibili. Solo metodo, costanza e un programma costruito su di te.
+              La mia filosofia è semplice: niente scorciatoie, niente promesse impossibili, niente protocolli copiati. Solo metodo, costanza e un programma costruito addosso a te. Credo che il fitness sia uno strumento, non un fine — uno strumento per stare meglio nella tua vita di tutti i giorni, per dormire bene, per avere energia quando torni a casa la sera, per piacerti un po' di più quando ti guardi allo specchio.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Lavoro in palestra in zona Navigli, a domicilio se preferisci la comodità di casa, all'aperto nei parchi quando il meteo regge, e online con chi non vive a Milano ma vuole un coach serio che non si limita a mandare PDF generici. Ho clienti da Roma, Torino, Berlino e perfino due da Singapore: la distanza non è mai stata un problema, la mancanza di metodo sì.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Quando non alleno, alleno me stesso. Pratico powerlifting amatoriale, corro almeno tre volte a settimana, e una volta all'anno mi prendo una settimana intera per studiare — corsi, libri, conferenze. Il giorno in cui smetterò di imparare sarà il giorno in cui chiuderò la partita IVA. Per il resto, vivo a due passi dai Navigli, cucino male ma con entusiasmo, e nel weekend cerco di stare il più possibile fuori da palestre e PDF di anatomia.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Lavoro in palestra, a domicilio o all'aperto in zona Navigli. E online con chi non vive a Milano ma vuole un coach serio.
+              Una cosa in cui credo profondamente: il personal trainer non è un istruttore di esercizi, è un costruttore di abitudini. Gli esercizi giusti li trovi anche su YouTube, gratis, in alta definizione. Quello che non trovi è qualcuno che costruisca un sistema sostenibile attorno alla tua vita reale e che ti tenga aggrappato al percorso quando la motivazione vacilla. Quello è il mio lavoro vero, ed è per questo che vengo pagato. Tutto il resto — schede, set, ripetizioni, periodizzazione — è solo lo strumento con cui faccio il mestiere.
             </p>
           </div>
           <img src="https://picsum.photos/seed/luca-portrait/700/900" alt="Luca Ferretti" className="w-full block" />
@@ -30,7 +36,10 @@ export default function ChiSono() {
 
       <section className="py-20 bg-card border-y border-border">
         <div className="container mx-auto">
-          <h3 className="font-display text-4xl mb-10">CERTIFICAZIONI</h3>
+          <h3 className="font-display text-4xl mb-6">CERTIFICAZIONI</h3>
+          <p className="text-muted-foreground max-w-3xl mb-10 leading-relaxed">
+            La formazione continua è parte del lavoro, non un optional. Ogni anno scelgo almeno un corso strutturato in cui investire tempo e soldi: nutrizione applicata, riabilitazione del lombare, programmazione della forza. Ecco i titoli principali su cui si basa il mio metodo.
+          </p>
           <div className="grid md:grid-cols-3 gap-6">
             {["ISSA Certified Personal Trainer", "FIF Functional Training", "Precision Nutrition L1"].map((c) => (
               <div key={c} className="border border-border p-6">
