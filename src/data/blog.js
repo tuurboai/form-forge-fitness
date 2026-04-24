@@ -1,0 +1,42 @@
+export const articoli = [
+  {
+    slug: "quante-volte-allenarsi-settimana",
+    titolo: "Quante volte allenarsi a settimana? La risposta dipende da te",
+    categoria: "Allenamento",
+    data: "12 marzo 2025",
+    intro: "Non esiste una risposta universale. Scopri come trovare la frequenza giusta per i tuoi obiettivi.",
+    seed: "blog-1",
+  },
+  {
+    slug: "dieta-o-allenamento-cosa-conta-di-piu",
+    titolo: "Dieta o allenamento: cosa conta di più per dimagrire?",
+    categoria: "Nutrizione",
+    data: "28 febbraio 2025",
+    intro: "Il dibattito senza fine. Ma la risposta è più semplice di quello che pensi.",
+    seed: "blog-2",
+  },
+  {
+    slug: "errori-palestra-principianti",
+    titolo: "I 5 errori che fanno tutti i principianti in palestra",
+    categoria: "Allenamento",
+    data: "10 febbraio 2025",
+    intro: "Evitarli ti farà risparmiare mesi di progressi mancati e qualche infortunio.",
+    seed: "blog-3",
+  },
+  {
+    slug: "allenarsi-casa-senza-attrezzi",
+    titolo: "Allenarsi a casa senza attrezzi: funziona davvero?",
+    categoria: "Allenamento",
+    data: "20 gennaio 2025",
+    intro: "Sì, ma solo se sai cosa stai facendo. Ecco come strutturare un allenamento efficace.",
+    seed: "blog-4",
+  },
+  {
+    slug: "proteine-quante-assumerne",
+    titolo: "Proteine: quante assumerne ogni giorno per costruire muscolo",
+    categoria: "Nutrizione",
+    data: "5 gennaio 2025",
+    intro: "I numeri reali, senza miti e senza integratori inutili.",
+    seed: "blog-5",
+  },
+];
