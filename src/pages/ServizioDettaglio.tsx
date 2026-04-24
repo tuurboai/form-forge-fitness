@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import SiteLayout from "@/components/SiteLayout";
 import CTABanner from "@/components/CTABanner";
 import { servizi } from "@/data/servizi";
+import { imageForSeed } from "@/assets/images";
 
 export default function ServizioDettaglio() {
   const { slug } = useParams();
@@ -32,7 +33,7 @@ export default function ServizioDettaglio() {
           <h2 className="font-display text-5xl md:text-7xl mb-6">{servizio.titolo}</h2>
           <p className="text-xl text-muted-foreground mb-10">{servizio.descrizione}</p>
 
-          <img src={`https://picsum.photos/seed/${servizio.seed}/1200/600`} alt={servizio.titolo} className="w-full block mb-10" />
+          <img src={imageForSeed(servizio.seed)} alt={servizio.titolo} className="w-full block mb-10" />
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-card border border-border p-6">
