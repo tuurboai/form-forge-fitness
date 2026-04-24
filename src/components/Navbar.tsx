@@ -30,7 +30,7 @@ export default function Navbar() {
             </button>
             <div className="absolute right-0 top-full pt-3 hidden group-hover:block">
               <div className="bg-background border border-border shadow-xl w-[640px] grid grid-cols-2 gap-x-6 gap-y-1 p-6 max-h-[70vh] overflow-y-auto">
-                {categorie.map((cat) => (
+                {categorie.map((cat: string) => (
                   <div key={cat} className="mb-3">
                     <div className="text-xs uppercase tracking-widest text-primary mb-2 border-b border-border pb-1">
                       {cat}
