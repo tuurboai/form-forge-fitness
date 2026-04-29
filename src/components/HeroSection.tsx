@@ -34,30 +34,37 @@ export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = 
   const [current, setCurrent] = useState(0);
 
   // Carica le slide una alla volta in modo asincrono — ritarda volutamente l'LCP.
+  // Ogni nuova slide caricata diventa subito quella attiva, causando uno shift di altezza.
   useEffect(() => {
     const timers = SLIDES.map((slide, i) =>
       setTimeout(() => {
-        setLoaded((prev) => (prev.includes(i) ? prev : [...prev, i]));
+        setLoaded((prev) => {
+          if (prev.includes(i)) return prev;
+          const next = [...prev, i];
+          setCurrent(next.length - 1);
+          return next;
+        });
       }, slide.delay)
     );
     return () => timers.forEach(clearTimeout);
   }, []);
 
-  // Avvia la rotazione solo quando almeno due slide sono caricate.
+  // Rotazione continua tra le slide caricate per mantenere lo shift periodico.
   useEffect(() => {
     if (loaded.length < 2) return;
     const interval = setInterval(() => {
       setCurrent((c) => (c + 1) % loaded.length);
-    }, 3500);
+    }, 2200);
     return () => clearInterval(interval);
   }, [loaded.length]);
 
   const activeSlide = SLIDES[loaded[current] ?? 0];
+  const sectionHeight = loaded.length === 0 ? 420 : activeSlide.height;
 
   return (
     <section
       className="relative flex items-center justify-center overflow-hidden bg-secondary"
-      style={{ minHeight: loaded.length === 0 ? "60vh" : activeSlide.minHeight }}
+      style={{ height: `${sectionHeight}px` }}
     >
       {loaded.map((i) => {
         const slide = SLIDES[i];
@@ -67,11 +74,8 @@ export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = 
             key={i}
             src={slide.src}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-            style={{
-              opacity: isActive ? 1 : 0,
-              minHeight: slide.minHeight,
-            }}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: isActive ? 1 : 0 }}
           />
         );
       })}
