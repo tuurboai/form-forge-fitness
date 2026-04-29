@@ -58,8 +58,16 @@ export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = 
     return () => clearInterval(interval);
   }, [loaded.length]);
 
+  const allLoaded = loaded.length === SLIDES.length;
   const activeSlide = SLIDES[loaded[current] ?? 0];
-  const sectionHeight = loaded.length === 0 ? 420 : activeSlide.height;
+  // Durante il caricamento progressivo l'altezza varia per ogni slide (genera CLS).
+  // Una volta caricate tutte, la sezione si stabilizza su un'altezza fissa uniforme.
+  const STABLE_HEIGHT = 640;
+  const sectionHeight = allLoaded
+    ? STABLE_HEIGHT
+    : loaded.length === 0
+    ? 420
+    : activeSlide.height;
 
   return (
     <section
