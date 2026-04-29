@@ -19,14 +19,16 @@ interface HeroSectionProps {
 
 // Slider asincrono: carica una serie di immagini con ritardi crescenti.
 // Ogni slide ha un'altezza diversa per amplificare il CLS quando entra in scena.
+const INITIAL_DELAY = 1000;
+const STEP_DELAY = 1000;
 const SLIDES: { src: string; height: number; delay: number }[] = [
-  { src: heroHome, height: 420, delay: 1400 },
-  { src: srvPt, height: 880, delay: 2600 },
-  { src: srvDim, height: 540, delay: 3800 },
-  { src: srvAtl, height: 1020, delay: 5000 },
-  { src: tr1, height: 480, delay: 6200 },
-  { src: srvHome, height: 940, delay: 7400 },
-  { src: portraitLuca, height: 600, delay: 8600 },
+  { src: heroHome, height: 420, delay: INITIAL_DELAY + STEP_DELAY * 0 },
+  { src: srvPt, height: 880, delay: INITIAL_DELAY + STEP_DELAY * 1 },
+  { src: srvDim, height: 540, delay: INITIAL_DELAY + STEP_DELAY * 2 },
+  { src: srvAtl, height: 1020, delay: INITIAL_DELAY + STEP_DELAY * 3 },
+  { src: tr1, height: 480, delay: INITIAL_DELAY + STEP_DELAY * 4 },
+  { src: srvHome, height: 940, delay: INITIAL_DELAY + STEP_DELAY * 5 },
+  { src: portraitLuca, height: 600, delay: INITIAL_DELAY + STEP_DELAY * 6 },
 ];
 
 export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = "/contatti" }: HeroSectionProps) {
