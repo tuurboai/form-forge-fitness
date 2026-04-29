@@ -72,7 +72,7 @@ export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = 
     if (loaded.length < 2) return;
     const interval = setInterval(() => {
       setCurrent((c) => (c + 1) % loaded.length);
-    }, 2200);
+    }, 3000);
     return () => clearInterval(interval);
   }, [loaded.length]);
 
