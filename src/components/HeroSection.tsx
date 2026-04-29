@@ -30,26 +30,37 @@ const SLIDES: { src: string; height: number; delay: number }[] = [
 ];
 
 export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = "/contatti" }: HeroSectionProps) {
-  const [loaded, setLoaded] = useState<number[]>([]);
+  // Solo il primo caricamento della sessione causa lo shift di altezza.
+  // Dopo, lo slider parte già con tutte le slide caricate e altezza stabile.
+  const isFirstLoad = typeof window !== "undefined"
+    ? !window.sessionStorage.getItem("hero-loaded")
+    : true;
+
+  const [loaded, setLoaded] = useState<number[]>(
+    isFirstLoad ? [] : SLIDES.map((_, i) => i)
+  );
   const [current, setCurrent] = useState(0);
 
-  // Carica le slide una alla volta in modo asincrono — ritarda volutamente l'LCP.
-  // Ogni nuova slide caricata diventa subito quella attiva, causando uno shift di altezza.
+  // Caricamento progressivo asincrono — solo alla prima visita.
   useEffect(() => {
+    if (!isFirstLoad) return;
     const timers = SLIDES.map((slide, i) =>
       setTimeout(() => {
         setLoaded((prev) => {
           if (prev.includes(i)) return prev;
           const next = [...prev, i];
           setCurrent(next.length - 1);
+          if (next.length === SLIDES.length) {
+            window.sessionStorage.setItem("hero-loaded", "1");
+          }
           return next;
         });
       }, slide.delay)
     );
     return () => timers.forEach(clearTimeout);
-  }, []);
+  }, [isFirstLoad]);
 
-  // Rotazione continua tra le slide caricate per mantenere lo shift periodico.
+  // Rotazione continua tra le slide caricate (nessuno shift dopo il primo carico).
   useEffect(() => {
     if (loaded.length < 2) return;
     const interval = setInterval(() => {
@@ -60,8 +71,8 @@ export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = 
 
   const allLoaded = loaded.length === SLIDES.length;
   const activeSlide = SLIDES[loaded[current] ?? 0];
-  // Durante il caricamento progressivo l'altezza varia per ogni slide (genera CLS).
-  // Una volta caricate tutte, la sezione si stabilizza su un'altezza fissa uniforme.
+  // Durante il primo caricamento l'altezza varia per ogni slide (CLS).
+  // Una volta caricate tutte (o nelle visite successive), altezza fissa.
   const STABLE_HEIGHT = 640;
   const sectionHeight = allLoaded
     ? STABLE_HEIGHT
