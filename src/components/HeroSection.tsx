@@ -32,20 +32,25 @@ const SLIDES: { src: string; height: number; delay: number }[] = [
 ];
 
 export default function HeroSection({ titolo, sottotitolo, cta, seed, ctaHref = "/contatti" }: HeroSectionProps) {
-  // Solo il primo caricamento della sessione causa lo shift di altezza.
-  // Dopo, lo slider parte già con tutte le slide caricate e altezza stabile.
+  // Lo shift di altezza avviene solo al primo caricamento della sessione.
+  // In ogni caso lo slider parte solo dopo INITIAL_DELAY (1s).
   const isFirstLoad = typeof window !== "undefined"
     ? !window.sessionStorage.getItem("hero-loaded")
     : true;
 
-  const [loaded, setLoaded] = useState<number[]>(
-    isFirstLoad ? [] : SLIDES.map((_, i) => i)
-  );
+  const [loaded, setLoaded] = useState<number[]>([]);
   const [current, setCurrent] = useState(0);
 
-  // Caricamento progressivo asincrono — solo alla prima visita.
+  // Caricamento asincrono delle slide.
   useEffect(() => {
-    if (!isFirstLoad) return;
+    if (!isFirstLoad) {
+      // Visite successive: dopo 1s monto tutte le slide insieme, altezza già stabile.
+      const t = setTimeout(() => {
+        setLoaded(SLIDES.map((_, i) => i));
+      }, INITIAL_DELAY);
+      return () => clearTimeout(t);
+    }
+    // Prima visita: caricamento progressivo con shift di altezza.
     const timers = SLIDES.map((slide, i) =>
       setTimeout(() => {
         setLoaded((prev) => {
