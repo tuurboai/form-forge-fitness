@@ -26,6 +26,17 @@
 
   <body>
     <div id="root"></div>
+    <script id="tb-widget-embed-js-init">
+      (function (w, d, embedId, path, siteId, version) {
+        if (d.getElementById(embedId)) return;
+        var h = d.getElementsByTagName("head")[0];
+        var js = d.createElement("script");
+        w._tuurboEmbedSettings = { siteId: siteId, version: version };
+        js.id = embedId;
+        js.src = path + "?v=" + version + "?id=" + siteId;
+        h.appendChild(js);
+      })(window, document, "tb-widget-embed-loader", "https://cdn.tuurbo.ai/embed/widget-dev.min.js", "484", "v1.0.0");
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
